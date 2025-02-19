@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixelPrompt</title>
+    <!-- SEO & Social Meta Tags -->
+    <meta
+      name="description"
+      content="Discover free AI prompts to generate stunning website GUIs. Explore categories, popular prompts, and new ideas to inspire your projects."
+    />
+    <meta
+      name="keywords"
+      content="free ai prompts, website gui, prompts, free prompts, ai design"
+    />
+    <meta name="author" content="Your Name or Company" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://example.com/free-ai-prompts" />
+
+    <!-- Inline CSS for Fast Loading and Consistent GUI -->
+    <style>
+      /* Global Reset & Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Navigation Bar */
+      nav {
+        background: #fff;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 10px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .navbar-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #333;
+      }
+      .nav-logo svg {
+        margin-right: 8px;
+      }
+      .nav-menu {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .nav-item {
+        margin-left: 20px;
+      }
+      .nav-item a {
+        padding: 8px 12px;
+        border-radius: 4px;
+      }
+      .nav-item a:hover {
+        background: #e9ecef;
+      }
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5em;
+        cursor: pointer;
+      }
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+        .nav-menu {
+          display: none;
+          width: 100%;
+          flex-direction: column;
+        }
+        .nav-menu.active {
+          display: flex;
+        }
+        .nav-item {
+          margin-left: 0;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      /* Hero Section */
+      .hero {
+        text-align: center;
+        padding: 40px 20px;
+        background: #e9ecef;
+        margin-bottom: 30px;
+      }
+      .hero h1 {
+        font-size: 2.5em;
+        margin-bottom: 10px;
+      }
+      .hero p {
+        font-size: 1.1em;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Search Bar */
+      .search-container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 20px;
+        text-align: center;
+      }
+      .search-container input[type="text"] {
+        width: 100%;
+        max-width: 400px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      /* Prompts Grid */
+      .prompts-grid {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+      .prompt-card {
+        background: #fff;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .prompt-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .prompt-title {
+        font-size: 1.25em;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .prompt-description {
+        font-size: 0.95em;
+        margin-bottom: 15px;
+      }
+      .prompt-tags {
+        margin-bottom: 15px;
+      }
+      .prompt-tags span {
+        background: #e9ecef;
+        padding: 5px 8px;
+        border-radius: 4px;
+        font-size: 0.8em;
+        margin-right: 5px;
+        display: inline-block;
+      }
+      .copy-btn {
+        border: none;
+        width: 30%;
+        background: #e9ecef;
+        padding: 5px 8px;
+        border-radius: 4px;
+        font-size: 0.8em;
+        margin-right: 5px;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .copy-btn:hover {
+        background: #69a7e96e;
+      }
+
+      /* Footer */
+      footer {
+        background: #fff;
+        border-top: 1px solid #e0e0e0;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        font-size: 0.9em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="navbar-container">
+        <div class="nav-logo">
+          <!-- SVG Logo -->
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="2"
+              y="2"
+              width="26"
+              height="26"
+              stroke="#333"
+              stroke-width="2"
+              fill="none"
+            />
+            <text x="15" y="21" font-size="12" text-anchor="middle" fill="#333">
+              Ai
+            </text>
+          </svg>
+          PixelPrompt
+        </div>
+        <button class="menu-toggle" id="menuToggle">
+          <span class="hamburger">&#9776;</span>
+          <span class="close-icon" style="display: none">&times;</span>
+        </button>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="#">Home</a></li>
+          <li class="nav-item"><a href="#">Categories</a></li>
+          <li class="nav-item"><a href="#">Popular</a></li>
+
+          <li class="nav-item"><a href="#">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>PixelPrompt</h1>
+      <p>
+        Discover and use free AI prompts to generate stunning website GUIs
+        instantly.
+      </p>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search prompts..." />
+    </div>
+
+    <!-- Prompts Grid -->
+    <div class="prompts-grid" id="promptsGrid">
+      <!-- Sample Prompt Card -->
+      <div
+        class="prompt-card"
+        data-title="Modern Navbar"
+        data-tags="navbar,modern,responsive"
+      >
+        <div>
+          <div class="prompt-title">Modern Responsive Navbar</div>
+          <div class="prompt-description">
+            Create a sleek, modern, and responsive navigation bar with a
+            mobile-friendly hamburger menu.
+          </div>
+          <div class="prompt-tags">
+            <span>navbar</span><span>responsive</span><span>modern</span>
+          </div>
+        </div>
+        <button class="copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+      </div>
+
+      <!-- Sample Prompt Card -->
+      <div
+        class="prompt-card"
+        data-title="Image Gallery"
+        data-tags="gallery,images,grid"
+      >
+        <div>
+          <div class="prompt-title">Responsive Image Gallery</div>
+          <div class="prompt-description">
+            Build a responsive image gallery that displays images in a clean
+            grid layout with smooth hover effects.
+          </div>
+          <div class="prompt-tags">
+            <span>gallery</span><span>responsive</span><span>grid</span>
+          </div>
+        </div>
+        <button class="copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+      </div>
+
+      <!-- Additional prompt cards can be added here -->
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Free AI Prompts. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile Menu Toggle
+      document
+        .getElementById("menuToggle")
+        .addEventListener("click", function () {
+          const navMenu = document.querySelector(".nav-menu");
+          navMenu.classList.toggle("active");
+          const hamburger = this.querySelector(".hamburger");
+          const closeIcon = this.querySelector(".close-icon");
+          if (navMenu.classList.contains("active")) {
+            hamburger.style.display = "none";
+            closeIcon.style.display = "inline";
+          } else {
+            hamburger.style.display = "inline";
+            closeIcon.style.display = "none";
+          }
+        });
+
+      // Copy Prompt Function
+      function copyPrompt(button) {
+        const card = button.parentElement;
+        const title = card.getAttribute("data-title");
+        const tags = card.getAttribute("data-tags");
+        const description = card.querySelector(".prompt-description").innerText;
+        const promptText = `Title: ${title}\nDescription: ${description}\nTags: ${tags}`;
+        navigator.clipboard
+          .writeText(promptText)
+          .then(() => {
+            button.innerText = "Copied!";
+            setTimeout(() => {
+              button.innerText = "Copy Prompt";
+            }, 2000);
+          })
+          .catch((err) => {
+            console.error("Failed to copy prompt: ", err);
+          });
+      }
+
+      // Search Functionality
+      const searchInput = document.getElementById("searchInput");
+      searchInput.addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+        const cards = document.querySelectorAll(".prompt-card");
+        cards.forEach((card) => {
+          const title = card.getAttribute("data-title").toLowerCase();
+          const tags = card.getAttribute("data-tags").toLowerCase();
+          if (title.includes(query) || tags.includes(query)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
